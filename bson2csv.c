@@ -55,10 +55,10 @@ char *bson_val_to_str(bson_iter_t *iter) {
         case BSON_TYPE_UTF8:
             return strdup(bson_iter_utf8(iter, NULL));
         case BSON_TYPE_INT32:
-            asprintf(&res, "%ld", bson_iter_int32(iter));
+            asprintf(&res, "%d", bson_iter_int32(iter));
             return res;
         case BSON_TYPE_INT64:
-            asprintf(&res, "%Ld", bson_iter_int64(iter));
+            asprintf(&res, "%lld", bson_iter_int64(iter));
             return res;
         case BSON_TYPE_BOOL:
             return strdup(bson_iter_bool(iter) ? TRUE_VALUE_ATOM : FALSE_VALUE_ATOM);
@@ -264,7 +264,7 @@ int main (int argc, char *argv[])
                 fputc((j == field_count - 1) ? CSV_NR_CHAR : CSV_DELIM_CHAR, stdout);
             }
             if ((i + 1) % 100000 == 0)
-                fprintf(stderr, "\rProcessing input at record position %d...", (i+1));
+                fprintf(stderr, "\rProcessing input at record position %lu...", (i+1));
         }
     }
 

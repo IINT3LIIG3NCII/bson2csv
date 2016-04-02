@@ -1,6 +1,6 @@
 CC=gcc
 INSTALL=install
-CFLAGS=-g
+CFLAGS=-O2
 LDFLAGS=
 BIN_PREFIX=/usr/local/bin/
 

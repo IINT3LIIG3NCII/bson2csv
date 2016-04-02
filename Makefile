@@ -10,6 +10,9 @@ BSON_LDFLAGS=`pkg-config --libs libbson-1.0`
 bson2csv: bson2csv.c
 	$(CC) $(CFLAGS) $(BSON_CFLAGS) -o $@ $(LDFLAGS) $(BSON_LDFLAGS) $<
 
+bson2csv.static: bson2csv.c
+	$(CC) -static $(CFLAGS) $(BSON_CFLAGS) -o $@ $(LDFLAGS) $< $(BSON_LDFLAGS) -lpthreads
+
 install: bson2csv
 	$(INSTALL) -m 755 $< $(BIN_PREFIX)
 

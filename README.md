@@ -5,7 +5,7 @@ BSON to CSV converter written in C
 
 ### Requirements
 
-bson2csv depends on [libbson](https://api.mongodb.org/libbson/current/) and requires `pkg-config` for build. Steps for its installation varies on different operation systems and distros.
+bson2csv depends on [libbson](https://api.mongodb.org/libbson/current/) and requires `pkg-config` for build. Steps for its installation varies on different operation systems and distros. It is not required if you are decided to use [static binary](https://github.com/Snawoot/bson2csv/releases/download/v0.1/bson2csv.static.linux_x86_64) for Linux x86_64.
 
 #### Mac
 
@@ -17,7 +17,7 @@ host:~ user$ brew install pkg-config libbson
 
 #### Linux
 
-Depends on distro and package manager.
+Depends on distro and package manager. Also, there are available pre-built [static binary](https://github.com/Snawoot/bson2csv/releases/download/v0.1/bson2csv.static.linux_x86_64) for Linux x86_64.
 
 #### Windows
 
@@ -35,9 +35,16 @@ host:bson2csv user$ make
 host:bson2csv user$ sudo make install
 ```
 
+#### Linux x86_64 pre-built static binary
+```bash
+wget 'https://github.com/Snawoot/bson2csv/releases/download/v0.1/bson2csv.static.linux_x86_64' -O bson2csv
+chmod +x bson2csv
+./bson2csv
+```
+
 ## Usage
 
-### Invokation
+### Invocation
 
 ```
 bson2csv <collection.bson> <fields.txt> [[start index] <stop index>]

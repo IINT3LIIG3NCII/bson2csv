@@ -5,7 +5,7 @@ BSON to CSV converter written in C
 
 ### Requirements
 
-bson2csv depends on [libbson](https://api.mongodb.org/libbson/current/) and requires `pkg-config` for build. Steps for its installation varies on different operation systems and distros. It is not required if you are decided to use [static binary](https://github.com/Snawoot/bson2csv/releases/download/v0.1/bson2csv.static.linux_x86_64) for Linux x86_64.
+bson2csv depends on [libbson](https://api.mongodb.org/libbson/current/) and requires `pkg-config` for build. Steps for its installation varies on different operation systems and distros. It is not required if you are decided to use [static binaries](https://github.com/Snawoot/bson2csv#static-binaries) for Linux ([x86_64](https://github.com/Snawoot/bson2csv/releases/download/v0.2/bson2csv.static.linux_x86_64) / [i386](https://github.com/Snawoot/bson2csv/releases/download/v0.2/bson2csv.static.linux_i386)).
 
 #### Mac
 
@@ -17,7 +17,7 @@ host:~ user$ brew install pkg-config libbson
 
 #### Linux
 
-Depends on distro and package manager. Also, there are available pre-built [static binary](https://github.com/Snawoot/bson2csv/releases/download/v0.1/bson2csv.static.linux_x86_64) for Linux x86_64.
+Depends on distro and package manager. Also, there are available pre-built [static binaries](https://github.com/Snawoot/bson2csv#static-binaries) for Linux ([x86_64](https://github.com/Snawoot/bson2csv/releases/download/v0.2/bson2csv.static.linux_x86_64) / [i386](https://github.com/Snawoot/bson2csv/releases/download/v0.2/bson2csv.static.linux_i386)).
 
 #### Windows
 
@@ -35,9 +35,11 @@ host:bson2csv user$ make
 host:bson2csv user$ sudo make install
 ```
 
-#### Linux x86_64 pre-built static binary
+### Static binaries
+There are static binaries available for Linux ([x86_64](https://github.com/Snawoot/bson2csv/releases/download/v0.2/bson2csv.static.linux_x86_64) / [i386](https://github.com/Snawoot/bson2csv/releases/download/v0.2/bson2csv.static.linux_i386)). Static binaries does not depend on any libraries and can be runned directly after download.
+#### Linux
 ```bash
-wget 'https://github.com/Snawoot/bson2csv/releases/download/v0.1/bson2csv.static.linux_x86_64' -O bson2csv
+wget 'https://github.com/Snawoot/bson2csv/releases/download/v0.2/bson2csv.static.linux_x86_64' -O bson2csv
 chmod +x bson2csv
 ./bson2csv
 ```

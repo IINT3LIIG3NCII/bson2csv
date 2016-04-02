@@ -11,7 +11,7 @@ bson2csv: bson2csv.c
 	$(CC) $(CFLAGS) $(BSON_CFLAGS) -o $@ $(LDFLAGS) $(BSON_LDFLAGS) $<
 
 bson2csv.static: bson2csv.c
-	$(CC) -static $(CFLAGS) $(BSON_CFLAGS) -o $@ $(LDFLAGS) $< $(BSON_LDFLAGS) -lpthreads
+	$(CC) -static $(CFLAGS) $(BSON_CFLAGS) -o $@ $(LDFLAGS) $< $(BSON_LDFLAGS) -lpthread
 
 install: bson2csv
 	$(INSTALL) -m 755 $< $(BIN_PREFIX)

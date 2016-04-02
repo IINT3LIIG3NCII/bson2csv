@@ -88,3 +88,7 @@ It will produce output file:
 $ cat example.csv
 "000000000000000000012345","1","2","asdfanother","blah"
 ```
+
+## Issues
+
+1. Due to file addressing limitations, libbson (and this program) does not support files larger than 2 GB on 32bit systems.

@@ -1,5 +1,5 @@
 # bson2csv
-BSON to CSV converter written in C
+BSON to CSV converter written in C. This program is mostly intended to export data from MongoDB to SQL databases. BSON dump is safe and convenient way to get data from Mongo and CSV import is common way to bulk-load data into SQL database (sometimes prefferable over sending SQL queries, as in my case with MonetDB).
 
 ## Installation
 

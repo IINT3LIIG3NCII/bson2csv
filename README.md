@@ -1,8 +1,44 @@
 # bson2csv
 BSON to CSV converter written in C
 
+## Installation
+
+### Requirements
+
+bson2csv depends on [libbson](https://api.mongodb.org/libbson/current/) and requires `pkg-config` for build. Steps for its installation varies on different operation systems and distros.
+
+#### Mac
+
+For Mac OS X all dependencies available in Homebrew repository:
+```
+host:~ user$ brew install pkg-config libbson
+...
+```
+
+#### Linux
+
+Depends on distro and package manager.
+
+#### Windows
+
+I didn\`t even tried, but it seems possible.
+
+### Building
+
+#### Linux / MacOS / *BSD / ...
+
+```
+host:~ user$ git clone https://github.com/Snawoot/bson2csv.git
+...
+host:~ user$ cd bson2csv/
+host:bson2csv user$ make
+host:bson2csv user$ sudo make install
+```
+
 ## Usage
+
 ### Invokation
+
 ```
 bson2csv <collection.bson> <fields.txt> [[start index] <stop index>]
 ```
@@ -15,6 +51,7 @@ bson2csv <collection.bson> <fields.txt> [[start index] <stop index>]
 `stop index` - Consecutive number of last exported document from BSON file.
 
 ### Example
+
 Let\`s assume we have BSON file with documents having following structure:
 ```
 $ bsondump sample.bson
